@@ -1,0 +1,66 @@
+PATH:
+ /apkHasil:
+   Post: add user baru
+ /apkHasil/createWithArray:
+   Post: add user baru dengan upload
+ /apkHasil/{uidUser}:
+   Get: ambil data 1 user
+   Put: update data 1 user
+   Delete: delete 1 user
+ /apkHasil/{uidUser}/uploadImage:
+   Post: upload image 1 user
+ /apkHasil/{uidUser}/resetPin:
+   Get: reset password 1 user
+ /apkHasil/listPaging:
+   Get: mendapatkan data user dengan paging
+ /wilayah/provinsi:
+   Post: add provinsi baru
+ /wilayah/{uidProvinsi}/kotaKab:
+   Post: add kota kabupaten baru
+   get: mendapatkan data kota kabupaten dari propinsi yang dikirim
+ /wilayah/{uidProvinsi}/{uidKotaKab}/kecamatan:
+   Post: add kecamatan baru
+   get: mendapatkan data kota kecamatan dari uidPovinsi dan uidKotaKab yang dikirim
+ /wilayah/{uidProvinsi}/{uidKotaKab}/{uidKecamatan}/kelurahan:
+   Post: add kelurahan baru
+   get: mendapatkan data kota kelurahan dari uidPovinsi, uidKotaKab dan uidKecamatan yang dikirim
+
+OBJECT:
+  UserAccount:
+    uidUser: uuid
+    nama: string
+    nohp: string
+    email: string
+    roleAkses: string(negara,provinsi,kotaKab,kecamatan,kelurahan,rw,rt)
+    namaProvinsi: string
+    namaKotaKab: string
+    namaKecamatan: string
+    namaKelurahan: string
+    rw: int
+    rt: int
+    username: string
+    password: string
+    statusAktif: boolean
+    wrongPassword: integer
+    followWhat: array
+    firstLogin: boolean
+    lastLogin: dateTime
+    imagesUrl: string
+  Wilayah:
+    uidPovinsi: uuid
+    provinsi: string
+    KodeProvinsi: string
+    dataKotaKab: 
+      uidKotaKab: string
+      kotaKab: string
+      kodekotaKab: string
+      koordinatGpsKota: geoJson
+      dataKecamatan:
+        uidKecamatan: string
+        kecamatan: string
+        kodeKecamatan: string
+        dataKelurahan:
+          uidKelurahan: string
+          kelurahan: string
+          kodeKelurahan: string
+          koordinatGpsKel: geoJson

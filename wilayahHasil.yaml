@@ -1,0 +1,47 @@
+PATH:
+/wilHasil/{uidWilHasil}:
+  get: get data dari suatu kelurahan
+  filter: rw, rt, nama, status
+/wilHasil/summaryDetail/{uidWilHasil}:
+  get: get summary dari suatu rw atau rt di kelurahan
+/wilHasil/summary/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}:
+  get: get data summary berdasarkan url
+
+OBJECT:
+  wilHasil:
+    uidWilHasil: uuid
+    namaProvinsi: string
+    namaKotaKab: string
+    namaKecamatan: string
+    namaKelurahan: string
+    koordinatGps: geoJson
+    HasilTest: array #object HasilTest
+    sumTotalTest: integer
+    sumSehat: integer
+    sumOTG: integer
+    sumODP: integer
+    sumPDP: integer
+    sumPositif: integer
+  HasilTest:
+    uidHasilTest: uuid
+    namaLengkap: string
+    namaPanggilan: string
+    namaIbu: string
+    nohp: string
+    email: string
+    usia: integer
+    jenisKelamin: string
+    statusPekerjaan: string
+    alamatIdentitas: object Alamat
+    alamatTinggal: object Alamat
+    namaTempatKerja: string
+    alamatKerja: object Alamat
+    jawabanStatus: 0 belum diverifikasi, 1 diverifikasi pak rt atau pak rw, 2 dicek puskesmas
+    jawabanKesimpulan: SEHAT, OTG, ODP, PDP
+    jawabanTest: array #object Jawaban
+  Jawaban:
+    nomor: integer
+    pertanyaan: string
+    opsi: array
+    jawaban: array
+  

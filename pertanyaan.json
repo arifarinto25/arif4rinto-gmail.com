@@ -1,0 +1,111 @@
+[{
+    "id": "uid",
+    "nomor": 1,
+    "soal": "Apakah anda mengalami sakit seperti ini?",
+    "status": true,
+    "type": "multi",
+    "jawaban": [
+        {
+            "id": "uid",
+            "jawaban": "Sering Bersin",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Batuk",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Pilek",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Demam Ringan",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Nyeri Badan",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Tenggorokan Sakit",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Pusing / Sakit Kepala",
+            "presentase": "12,5"
+        },
+        {
+            "id": "uid",
+            "jawaban": "Sakit Kepala",
+            "presentase": "12,5"
+        }
+    ],
+    "presentasi": 40
+},{
+    "id": "uid",
+    "nomor": 2,
+    "soal": "Apakah anda demam?",
+    "status": true,
+    "type": "single",
+    "jawaban": [
+        {
+            "id": "uid",
+            "jawaban": "YA",
+            "presentase": "100"
+        },
+        {
+            "id": "uid",
+            "jawaban": "TIDAK",
+            "presentase": "0"
+        }
+    ],
+    "presentasi": 20
+},{
+    "id": "uid",
+    "nomor": 3,
+    "soal": "Apakah anda batuk kering?",
+    "status": true,
+    "type": "single",
+    "jawaban": [
+        {
+            "id": "uid",
+            "jawaban": "YA",
+            "presentase": "100"
+        },
+        {
+            "id": "uid",
+            "jawaban": "TIDAK",
+            "presentase": "0"
+        }
+    ],
+    "presentasi": 20
+},{
+    "id": "uid",
+    "nomor": 3,
+    "soal": "Apakah anda sesak nafas?",
+    "status": true,
+    "type": "single",
+    "jawaban": [
+        {
+            "id": "uid",
+            "jawaban": "YA",
+            "presentase": "70"
+        },{
+            "id": "uid",
+            "jawaban": "Nafas Berat",
+            "presentase": "30"
+        },
+        {
+            "id": "uid",
+            "jawaban": "TIDAK",
+            "presentase": "0"
+        }
+    ],
+    "presentasi": 20
+}]

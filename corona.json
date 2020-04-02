@@ -1,0 +1,86 @@
+[{
+    "id": "uid",
+    "nomor": 1,
+    "soal": "Apakah anda demam atau memiliki riwayat demam dalam 14 hari?",
+    "status": true,
+    "type": "single",
+    "opsi": [
+        {
+            "jawaban": "YA"
+        },
+        {
+            "jawaban": "TIDAK"
+        }
+    ]
+},{
+    "id": "uid",
+    "nomor": 2,
+    "soal": "Apakah anda pilek, sakit tenggorokan atau batuk?",
+    "status": true,
+    "type": "single",
+    "opsi": [
+        {
+            "jawaban": "YA"
+        },
+        {
+            "jawaban": "TIDAK"
+        }
+    ]
+},{
+    "id": "uid",
+    "nomor": 3,
+    "soal": "Apakah anda mengalami sesak nafas atau nafas berat?",
+    "status": true,
+    "type": "single",
+    "opsi": [
+        {
+            "jawaban": "YA"
+        },
+        {
+            "jawaban": "TIDAK"
+        }
+    ]
+},{
+    "id": "uid",
+    "nomor": 4,
+    "soal": "Apakah anda pernah bertemu atau kontak langsung dengan orang yang positif CORONA?",
+    "status": true,
+    "type": "single",
+    "opsi": [
+        {
+            "jawaban": "YA"
+        },
+        {
+            "jawaban": "TIDAK"
+        }
+    ]
+},{
+    "id": "uid",
+    "nomor": 5,
+    "soal": "Dalam 14 hari ini, apakah anda mengunjungi atau singgah dari daerah ini?",
+    "status": true,
+    "type": "single",
+    "opsi": [
+        {
+            "jawaban": "TIDAK"
+        },{
+            "jawaban": "JAKARTA, BEKASI, DEPOK"
+        },{
+            "jawaban": "KAB BOGOR, KOTA BOGOR"
+        },{
+            "jawaban": "KARAWANG"
+        },{
+            "jawaban": "TANGERANG"
+        },{
+            "jawaban": "SURAKARTA"
+        },{
+            "jawaban": "KEDIRI, MALANG, MAGETAN"
+        },{
+            "jawaban": "SURABAYA, SIDOARJO"
+        },{
+            "jawaban": "PONTIANAK, BANJARMASIN, BALIKPAPAN"
+        },{
+            "jawaban": "MAKASAR"
+        }
+    ]
+}]
