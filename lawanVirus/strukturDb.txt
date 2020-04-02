@@ -1,0 +1,43 @@
+data message (by follow what)
+uid
+uiduser
+datetime
+tag_follow_what
+message
+status
+via (firebase,email)
+=====>>> post, put, get all, get by id, delete
+
+data layanan kesehatan
+uid 
+provinsi
+kota_kab
+kec
+kelurahan
+nama
+alamat
+nohp
+lokasi_gps
+=====>>> post, put, get all, get by id, delete
+
+data info edukasi
+uid
+creation date
+uidcreator
+title
+description
+imgs array
+tags array
+status
+=====>>> post, put, get all, get by id, delete
+
+data berita
+uid
+creation date
+uidcreator
+title
+description
+imgs array
+tags array
+status
+=====>>> post, put, get all, get by id, delete

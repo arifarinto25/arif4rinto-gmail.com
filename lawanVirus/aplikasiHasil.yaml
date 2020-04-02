@@ -15,10 +15,12 @@ PATH:
   delete: hapus 1 data hasil test
 /apkHasil/listPaging/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}/{email}:
   get: mendapatkan data hasil test dgn filter wilayah dan email
+/apkHasil/pertanyaan/{namaPertanyaan}:
+  get: ambil pertanyaan
 
 OBJECT:
   ApkHasil:
-    uidApkHasil: uuid
+    idApkHasil: uuid
     email: string
     imei: string
     alamat: object Alamat
@@ -34,7 +36,7 @@ OBJECT:
     nomorRT: integer
     keterangan: string
   HasilTest:
-    uidHasilTest: uuid
+    idHasilTest: uuid
     namaLengkap: string
     namaPanggilan: string
     namaIbu: string
@@ -47,13 +49,19 @@ OBJECT:
     alamatTinggal: object Alamat
     namaTempatKerja: string
     alamatKerja: object Alamat
-    jawabanTest: array #object JawabanTest
-  JawabanTest:
+    jawabanTest: array #object SoalJawab
+  SoalJawab:
     nomor: integer
     pertanyaan: string
-    opsi: array
-    jawaban: array #object JawabanDetail
+    type: string = multiple or single
+    opsi: array #object SoalJawabDetail
+    jawaban: array #object SoalJawabDetail
     persentase: integer
-  JawabanDetail:
+  SoalJawabDetail:
     jawaban: string
     persentaseDetail: integer
+  
+  Pertanyaan:
+    id: uuid
+    nama: string
+    pertanyaanDetail: array #object SoalJawab
