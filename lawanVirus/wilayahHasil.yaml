@@ -5,7 +5,7 @@ PATH:
 /wilHasil/summaryDetail/{uidWilHasil}:
   get: get summary dari suatu rw atau rt di kelurahan
 /wilHasil/summary/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}:
-  get: get data summary berdasarkan url
+  get: get summary berdasarkan url
 
 OBJECT:
   wilHasil:

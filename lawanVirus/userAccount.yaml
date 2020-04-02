@@ -1,4 +1,4 @@
-PATH:
+PATH-01:
  /apkHasil:
    Post: add user baru
  /apkHasil/createWithArray:
@@ -13,16 +13,23 @@ PATH:
    Get: reset password 1 user
  /apkHasil/listPaging:
    Get: mendapatkan data user dengan paging
+
+PATH-02:
  /wilayah/provinsi:
    Post: add provinsi baru
+   put: update provinsi berdasarkan uidPovinsi
+   get: mendapatkan data provinsi seluruh indonesia
  /wilayah/{uidProvinsi}/kotaKab:
    Post: add kota kabupaten baru
-   get: mendapatkan data kota kabupaten dari propinsi yang dikirim
+   put: update kotaKab berdasarkan uidKotaKab
+   get: mendapatkan data kota kabupaten dari provinsi yang dikirim
  /wilayah/{uidProvinsi}/{uidKotaKab}/kecamatan:
    Post: add kecamatan baru
+   put: update kecamatan berdasarkan uidKecamatan
    get: mendapatkan data kota kecamatan dari uidPovinsi dan uidKotaKab yang dikirim
  /wilayah/{uidProvinsi}/{uidKotaKab}/{uidKecamatan}/kelurahan:
    Post: add kelurahan baru
+   put: update kelurahan berdasarkan uidKelurahan
    get: mendapatkan data kota kelurahan dari uidPovinsi, uidKotaKab dan uidKecamatan yang dikirim
 
 OBJECT:
@@ -50,17 +57,20 @@ OBJECT:
     uidPovinsi: uuid
     provinsi: string
     KodeProvinsi: string
-    dataKotaKab: 
-      uidKotaKab: string
-      kotaKab: string
-      kodekotaKab: string
-      koordinatGpsKota: geoJson
-      dataKecamatan:
-        uidKecamatan: string
-        kecamatan: string
-        kodeKecamatan: string
-        dataKelurahan:
-          uidKelurahan: string
-          kelurahan: string
-          kodeKelurahan: string
-          koordinatGpsKel: geoJson
+    dataKotaKab: array #object KotaKab
+  KotaKab:
+    uidKotaKab: string
+    kotaKab: string
+    kodekotaKab: string
+    koordinatGpsKota: geoJson
+    dataKecamatan: array #object Kecamatan
+  Kecamatan:
+    uidKecamatan: string
+    kecamatan: string
+    kodeKecamatan: string
+    dataKelurahan: array #object Kelurahan
+  Kelurahan:
+    uidKelurahan: string
+    kelurahan: string
+    kodeKelurahan: string
+    koordinatGpsKel: geoJson
