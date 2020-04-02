@@ -38,10 +38,14 @@ OBJECT:
     alamatKerja: object Alamat
     jawabanStatus: 0 belum diverifikasi, 1 diverifikasi pak rt atau pak rw, 2 dicek puskesmas
     jawabanKesimpulan: SEHAT, OTG, ODP, PDP
-    jawabanTest: array #object Jawaban
-  Jawaban:
+    jawabanTest: array #object JawabanTest
+  JawabanTest:
     nomor: integer
     pertanyaan: string
     opsi: array
-    jawaban: array
+    jawaban: array #object JawabanDetail
+    persentase: integer
+  JawabanDetail:
+    jawaban: string
+    persentaseDetail: integer
   
