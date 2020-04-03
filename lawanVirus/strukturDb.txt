@@ -1,30 +1,8 @@
-data message (by follow what)
-uid
-uiduser
-datetime
-tag_follow_what
-message
-status
-via (firebase,email)
-
-data layanan kesehatan
-uid 
-provinsi
-kota_kab
-kec
-kelurahan
-nama
-alamat
-nohp
-lokasi_gps
-
-data info edukasi dan data berita
-uid
-category
-creation date
-uidcreator
-title
-description
-imgs array
-tags array
-status
+*1. Status anda di rumah tempat anda tinggal?* [Ayah, Ibu, Kakek, Nenek, Anak, Pendatang/Tamu]
+*2. Apakah alamat KTP anda Kota Salatiga?* [Ya, Tidak]
+*3. Berapakah penghasilan anda perbulan?* [0 s/d 1jt, 1jt s/d 3jt, diatas 3jt]
+*4. Berapakah total penghasilan seluruh keluarga di rumah?* [0 s/d 1jt, 1jt s/d 3jt, diatas 3jt]
+*5. Status Pekerjaan anda saat ini?* [Pensiun, Bekerja, Pengangguran, Pelajar]
+*6. Jika anda bekerja, apa pekerjaan anda saat ini?* [Tidak Bekerja, Ojek Online, Usaha Kecil, Pengusaha, PNS, Pegawai Swasta]
+*7. Apakah anda terkena dampak dari Virus Corona?* [Tidak terkena dampak, PHK, Dirumahkan, Pendapatan Usaha Turun, Pendapatan Usaha tidak ada]
+*8. Untuk 3 bulan kedepan, apakah anda memiliki tabungan untuk memenuhi kebutuhan pokok anda dan keluarga?* [Memiliki tabungan, Ragu, Tidak memiliki]

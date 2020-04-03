@@ -1,0 +1,20 @@
+{
+    "id": "uid",
+    "nomor": 3,
+    "soal": "Apakah anda batuk kering?",
+    "status": true,
+    "type": "single",
+    "jawaban": [
+        {
+            "id": "uid",
+            "jawaban": "YA",
+            "presentase": "100"
+        },
+        {
+            "id": "uid",
+            "jawaban": "TIDAK",
+            "presentase": "0"
+        }
+    ],
+    "presentasi": 20
+}
