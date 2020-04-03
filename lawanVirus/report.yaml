@@ -1,10 +1,10 @@
 PATH:
-/wilHasil/{uidWilHasil}:
+/report/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}:
   get: get data dari suatu kelurahan
   filter: rw, rt, nama, status
-/wilHasil/summaryDetail/{uidWilHasil}:
+/report/summaryDetail/{uidWilHasil}:
   get: get summary dari suatu rw atau rt di kelurahan
-/wilHasil/summary/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}:
+/report/summary/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}:
   get: get summary berdasarkan url
 
 OBJECT:
