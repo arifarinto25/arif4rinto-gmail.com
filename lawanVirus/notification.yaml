@@ -1,0 +1,32 @@
+PATH-01:
+  /notification/admin/all:
+    post: get all message
+  /notification/admin/{id}:
+    get: get notification by id
+
+OBJECT:
+  notification:
+    id: uuid
+    accountId: uuid
+    accountName: string
+    createdTime: dateTime
+    process: dateTime
+    category: #object MessageCategory
+    title: string
+    message: string
+    smsDestination: string
+    emailDestination: string
+    firebaseDestination: string
+    sms: boolean
+    email: boolean
+    firebase: boolean
+    smsSendStatus: #enum SendStatus
+    emailSendStatus: #enum SendStatus
+    firebaseSendStatus: #enum SendStatus
+    readStatus: #enum ReadStatus
+    note: string
+  SendStatus:
+    enum: [NONE,QUEUE,PROCESS,SENT,FAILED]
+  ReadStatus:
+    enum: [READ,UNREAD]
+  MessageCategory:
