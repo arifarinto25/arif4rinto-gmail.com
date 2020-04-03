@@ -1,0 +1,60 @@
+PATH-01:
+  /info/admin:
+    post: create, role by level walikota
+    put: update
+  /info/admin/all:
+    post: get all by paging
+  /info/admin/{id}:
+    get: get by id
+    delete: delete by id
+  /infouser/{namaProvinsi}/{namaKotaKab}/all:
+    get: get all paging by wilayah
+  /infouser/{namaProvinsi}/{namaKotaKab}/headline:
+    get: get headLine data by wilayah
+  /infouser/{namaProvinsi}/{namaKotaKab}/{id}:
+    get: get by id
+PATH-02:
+  /layanan/admin:
+    post: create, role by level walikota
+    put: update
+  /layanan/admin/all:
+    post: get all by paging
+  /layanan/admin/{id}:
+    get: get by id
+    delete: delete by id
+  /layanan/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/all:
+    get: get layanan kesehatan paging by wilayah
+  /layanan/{id}:
+    get: get by id
+  
+OBJECT:
+  Info:
+    id: uuid
+    createDate: dateTime
+    creatorId: uuid
+    category: #enum InfoCategory
+    namaProvinsi: string
+    namaKotaKab: string
+    headLine: boolean
+    active: boolean
+    title: string
+    subtitle: string
+    content: string
+    images: array
+    tags: array
+    viewCount: integer
+  InfoCategory:
+    enum: [EDUKASI,BERITA]
+
+  LayananKesehatan:
+    id: uuid 
+    namaProvinsi: string
+    namaKotaKab: string
+    namaKecamatan: string
+    namaTempat: string
+    alamat: string
+    koordinatGps: string
+    notelp: string
+    type: #enum TipeLayanan
+  TipeLayanan:
+    enum: [RUMAH SAKIT, PUSKESMAS, KLINIK]
