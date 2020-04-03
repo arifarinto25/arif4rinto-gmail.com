@@ -1,21 +1,23 @@
 PATH:
-/apkHasil/{imei}:
+/test/{imei}:
   get: kirim imei, jika ada data imei reply data email sebagai default email, jika tidak ada maka oauth gmail / fb
-/apkHasil/byEmail/{email}:
+/test/byEmail/{email}:
   get: tanya, apakah ada email tersebut di database, jika ada = update / put imei dengan email, jika tidak ada = create / post baris baru
   post: create baris baru dengan imei dan email
   put: update data imei dengan dasar email
-/apkHasil/{email}:
+/test/corona/{email}:
   Post: add hasil test baru dengan data utama adalah email, imei, hasilTest. Proteksi per email isi 30 data per hari
   Get: ambil beberapa data hasil test berdasarkan email
   Put: update data imei | email, bisa untuk update status atau update lainnya
-/apkHasil/{email}/{uidHasilTest}:
+/test/corona/{email}/{uidHasilTest}:
   Get: ambil 1 data hasil test
   put: update 1 data hasil test atau test ulang atau test lagi
   delete: hapus 1 data hasil test
-/apkHasil/listPaging/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}/{email}:
+/test/corona/verifikasi/{email}/{uidHasilTest}:
+  put: update untuk verifikasi data oleh rt/rw, puskesmas, rs
+/test/listPaging/{namaProvinsi}/{namaKotaKab}/{namaKecamatan}/{namaKelurahan}/{email}:
   get: mendapatkan data hasil test dgn filter wilayah dan email
-/apkHasil/pertanyaan/{namaPertanyaan}:
+/test/pertanyaan/{namaPertanyaan}:
   get: ambil pertanyaan
 
 OBJECT:
@@ -41,7 +43,6 @@ OBJECT:
     namaPanggilan: string
     namaIbu: string
     nohp: string
-    email: string
     usia: integer
     jenisKelamin: string
     statusPekerjaan: string
@@ -49,6 +50,8 @@ OBJECT:
     alamatTinggal: object Alamat
     namaTempatKerja: string
     alamatKerja: object Alamat
+    jawabanStatus: 0 belum diverifikasi, 1 diverifikasi pak rt atau pak rw, 2 dicek puskesmas
+    jawabanKesimpulan: SEHAT, OTG, ODP, PDP, POSITIF
     jawabanTest: array #object SoalJawab
   SoalJawab:
     nomor: integer

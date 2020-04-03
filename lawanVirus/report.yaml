@@ -24,11 +24,11 @@ OBJECT:
     sumPositif: integer
   HasilTest:
     uidHasilTest: uuid
+    emailTester: string
     namaLengkap: string
     namaPanggilan: string
     namaIbu: string
     nohp: string
-    email: string
     usia: integer
     jenisKelamin: string
     statusPekerjaan: string
