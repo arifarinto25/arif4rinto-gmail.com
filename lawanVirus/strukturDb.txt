@@ -6,7 +6,6 @@ tag_follow_what
 message
 status
 via (firebase,email)
-=====>>> post, put, get all, get by id, delete
 
 data layanan kesehatan
 uid 
@@ -18,10 +17,10 @@ nama
 alamat
 nohp
 lokasi_gps
-=====>>> post, put, get all, get by id, delete
 
-data info edukasi
+data info edukasi dan data berita
 uid
+category
 creation date
 uidcreator
 title
@@ -29,15 +28,3 @@ description
 imgs array
 tags array
 status
-=====>>> post, put, get all, get by id, delete
-
-data berita
-uid
-creation date
-uidcreator
-title
-description
-imgs array
-tags array
-status
-=====>>> post, put, get all, get by id, delete

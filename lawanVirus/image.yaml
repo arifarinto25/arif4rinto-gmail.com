@@ -1,0 +1,11 @@
+PATH:
+  /image/upload/{category}:
+    post: upload image
+  /image/valid/{category}:
+    put: update image
+  /image/upload/info/{category}/{fileName}:
+    delete: hapus image
+  /image/{category}/{fileName}:
+    get: get image
+  /image/thumbnail/{category}/{fileName}:
+    get: get thumbnail

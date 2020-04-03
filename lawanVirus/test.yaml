@@ -53,6 +53,8 @@ OBJECT:
     jawabanStatus: 0 belum diverifikasi, 1 diverifikasi pak rt atau pak rw, 2 dicek puskesmas
     jawabanKesimpulan: SEHAT, OTG, ODP, PDP, POSITIF
     jawabanTest: array #object SoalJawab
+    waktuTest: dateTime
+    waktuStatus: dateTime
   SoalJawab:
     nomor: integer
     pertanyaan: string
